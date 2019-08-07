@@ -1,5 +1,5 @@
 //
-//  ParseStruct.swift
+//  AlbumLookupResponse.swift
 //  TestJSONParse
 //
 //  Created by Hao Wu on 07.08.19.

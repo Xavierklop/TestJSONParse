@@ -12,7 +12,7 @@
 		7500D90122FAFC5300365311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7500D8FF22FAFC5300365311 /* Main.storyboard */; };
 		7500D90322FAFC5500365311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7500D90222FAFC5500365311 /* Assets.xcassets */; };
 		7500D90622FAFC5500365311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7500D90422FAFC5500365311 /* LaunchScreen.storyboard */; };
-		7500D90E22FAFD1300365311 /* ParseStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7500D90D22FAFD1300365311 /* ParseStruct.swift */; };
+		7500D90E22FAFD1300365311 /* AlbumLookupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7500D90D22FAFD1300365311 /* AlbumLookupResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		7500D90222FAFC5500365311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7500D90522FAFC5500365311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7500D90722FAFC5500365311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7500D90D22FAFD1300365311 /* ParseStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseStruct.swift; sourceTree = "<group>"; };
+		7500D90D22FAFD1300365311 /* AlbumLookupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumLookupResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 			children = (
 				7500D8FB22FAFC5300365311 /* AppDelegate.swift */,
 				7500D8FD22FAFC5300365311 /* ViewController.swift */,
-				7500D90D22FAFD1300365311 /* ParseStruct.swift */,
+				7500D90D22FAFD1300365311 /* AlbumLookupResponse.swift */,
 				7500D8FF22FAFC5300365311 /* Main.storyboard */,
 				7500D90222FAFC5500365311 /* Assets.xcassets */,
 				7500D90422FAFC5500365311 /* LaunchScreen.storyboard */,
@@ -139,7 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7500D8FE22FAFC5300365311 /* ViewController.swift in Sources */,
-				7500D90E22FAFD1300365311 /* ParseStruct.swift in Sources */,
+				7500D90E22FAFD1300365311 /* AlbumLookupResponse.swift in Sources */,
 				7500D8FC22FAFC5300365311 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
