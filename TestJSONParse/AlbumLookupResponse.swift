@@ -8,58 +8,28 @@
 
 import Foundation
 
-struct AlbumLookupResponse: Decodable {
+struct AlbumLookupResponse: Codable {
     let resultCount: Int
-    let results: [ArtistOrAlbum]
+    let results: [AlbumResult]
 }
 
-enum ArtistOrAlbum: Decodable {
-    case artist(ItunesArtist)
-    case album(ItunesAlbum)
-}
-
-extension ArtistOrAlbum {
-    init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        do {
-            self = try .artist(container.decode(ItunesArtist.self))
-        } catch {
-            do {
-                self = try .album(container.decode(ItunesAlbum.self))
-            } catch {
-                throw DecodingError.typeMismatch(ArtistOrAlbum.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Encoded payload conflicts with expected type, (ItunesArtist or ArtistAlbum)") )
-            }
-        }
-    }
-}
-
-struct ItunesArtist: Decodable {
+struct AlbumResult: Codable {
     let artistName: String
-    let artistId: Int
-    let primaryGenreId: Int
+    let artistID: Int
     let primaryGenreName: String
-}
-
-struct ItunesAlbum: Decodable {
-    let id: Int
-    let artistName: String
-    let name: String
-    let censoredName: String
-    let artworkUrl: String
-    let isExplicit: Bool
-    let numberOfTracks: Int
-    let releaseDate: Date
-    let primaryGenre: String
+    let primaryGenreID: Int?
+    let collectionType: String?
+    let collectionID: Int?
+    let collectionName, collectionCensoredName: String?
+    let artworkUrl100: String?
+    let collectionExplicitness: String?
+    let releaseDate: String?
     
     enum CodingKeys: String, CodingKey {
-        case id = "collectionId"
-        case artistName
-        case name = "collectionName"
-        case censoredName = "collectionCensoredName"
-        case artworkUrl = "artworkUrl100"
-        case isExplicit = "collectionExplicitness"
-        case numberOfTracks = "trackCount"
-        case releaseDate
-        case primaryGenre = "primaryGenreName"
+        case artistID = "artistId"
+        case primaryGenreID = "primaryGenreId"
+        case collectionID = "collectionId"
+        case collectionName, collectionCensoredName, artworkUrl100, collectionExplicitness, releaseDate,artistName, primaryGenreName, collectionType
+        
     }
 }
